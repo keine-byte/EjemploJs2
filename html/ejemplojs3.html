@@ -1,0 +1,40 @@
+<script>
+
+    var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
+    for (var i = 0; i < meses.length; i++) {
+
+        console.log('Mes: ' + meses[i])
+
+    }
+
+    meses.forEach(mes => {
+
+        console.log(mes)
+        
+    });
+
+    var mesesCopia = []
+    mesesCopia[0] = 'Enero'
+    mesesCopia[1] = 'Febrero'
+    mesesCopia.push('junio')
+    mesesCopia.push('julio')
+    mesesCopia.push('septiembre')
+    mesesCopia.push('octubre')
+    
+    for (const i in mesesCopia) {
+
+        console.log('Mes: ' + mesesCopia[i])
+          
+    }
+
+    for (const mes of mesesCopia) {
+
+        console.log(mes)
+        
+    }
+
+
+
+
+</script>

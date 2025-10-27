@@ -1,0 +1,31 @@
+<script>
+// Pedir frase al usuario; si cancela, usar cadena vacía
+var frase = prompt('Ingrese una frase') || '';
+
+// Normalizar a minúsculas y reemplazar vocales acentuadas por su equivalente
+frase = frase
+    .toLowerCase()
+    .replace(/á/g, 'a')
+    .replace(/é/g, 'e')
+    .replace(/í/g, 'i')
+    .replace(/ó/g, 'o')
+    .replace(/ú/g, 'u')
+    .replace(/ü/g, 'u');
+
+var contador = 0;
+
+for (let i = 0; i < frase.length; i++) {
+    var ch = frase[i];
+    
+    // Comprobar que es una letra a-z
+    if (ch >= 'a' && ch <= 'z') {
+        // Si es letra y NO es vocal, entonces es consonante
+        if (ch !== 'a' && ch !== 'e' && ch !== 'i' && ch !== 'o' && ch !== 'u') {
+            contador++;
+        }
+    }
+}
+
+console.info('El número de consonantes es: ' + contador);
+
+</script>
