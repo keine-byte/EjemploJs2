@@ -12,17 +12,38 @@ function guardarDatos() {
         nombres: nombres,
         salario: salario,
         fechaNacimiento: fechaNacimiento
-    };  
+    };
 
     clientes.push(cliente);
 
     clientes.forEach(cliente => {
         console.table(cliente);
     });
-   
+
 }
 
-function consultar () {
+function consultar() {
 
-    
+    var cliente = clientes.find(cliente => cliente.cedula == cedula.value);
+
+    if (typeof cliente !== 'undefined') {
+
+        nombres.value = cliente.nombres;
+        salario.value = cliente.salario;
+        fechaNacimiento.value = cliente.fechaNacimiento;
+    }
+
+
+        // for (const cliente of clientes) {
+
+        //     if (cliente.cedula == cedula.value) {
+        //         nombres.value = cliente.nombres;
+        //         salario.value = cliente.salario;
+        //         fechaNacimiento.value = cliente.fechaNacimiento;
+        //         break;
+        //     }
+
+        // }
+
+
 }
